@@ -1,0 +1,39 @@
+-- This file has been generated from package.yaml by hpack version 0.28.2.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: cac0110b1f554731a9bbf259e30c3727198448e8c15a25ae9a667c98d6decf6a
+
+name:           lens-person
+version:        0.1.0.2
+build-type:     Simple
+cabal-version:  >= 1.10
+
+library
+  hs-source-dirs:
+      src
+  build-depends:
+      base
+    , lens
+    , microlens
+    , microlens-th
+    , time
+  exposed-modules:
+      Person
+  other-modules:
+      Paths_lens_person
+  default-language: Haskell2010
+
+test-suite test
+  type: exitcode-stdio-1.0
+  main-is: Tests.hs
+  hs-source-dirs:
+      test
+  build-depends:
+      base
+    , hspec
+    , lens-person
+    , time
+  other-modules:
+      Paths_lens_person
+  default-language: Haskell2010

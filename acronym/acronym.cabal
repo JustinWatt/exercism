@@ -1,0 +1,36 @@
+-- This file has been generated from package.yaml by hpack version 0.28.2.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 124aa43cec56a50bc1614e1422f22b1ac7bc164a076827e3e681e2b66f2fe1ed
+
+name:           acronym
+version:        1.2.0.4
+build-type:     Simple
+cabal-version:  >= 1.10
+
+library
+  hs-source-dirs:
+      src
+  build-depends:
+      base
+    , containers
+    , split
+  exposed-modules:
+      Acronym
+  other-modules:
+      Paths_acronym
+  default-language: Haskell2010
+
+test-suite test
+  type: exitcode-stdio-1.0
+  main-is: Tests.hs
+  hs-source-dirs:
+      test
+  build-depends:
+      acronym
+    , base
+    , hspec
+  other-modules:
+      Paths_acronym
+  default-language: Haskell2010
