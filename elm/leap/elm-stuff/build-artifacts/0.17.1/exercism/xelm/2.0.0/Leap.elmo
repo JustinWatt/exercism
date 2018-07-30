@@ -1,0 +1,10 @@
+var _exercism$xelm$Leap$divisible = F2(
+	function (n, d) {
+		return _elm_lang$core$Native_Utils.eq(
+			A2(_elm_lang$core$Basics_ops['%'], n, d),
+			0);
+	});
+var _exercism$xelm$Leap$isLeapYear = function (year) {
+	return (A2(_exercism$xelm$Leap$divisible, year, 4) && _elm_lang$core$Basics$not(
+		A2(_exercism$xelm$Leap$divisible, year, 100))) || A2(_exercism$xelm$Leap$divisible, year, 400);
+};

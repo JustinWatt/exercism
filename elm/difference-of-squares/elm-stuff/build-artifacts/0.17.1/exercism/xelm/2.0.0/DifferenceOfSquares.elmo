@@ -1,0 +1,18 @@
+var _exercism$xelm$DifferenceOfSquares$square = function (n) {
+	return n * n;
+};
+var _exercism$xelm$DifferenceOfSquares$sumOfSquares = function (n) {
+	return _elm_lang$core$List$sum(
+		A2(
+			_elm_lang$core$List$map,
+			_exercism$xelm$DifferenceOfSquares$square,
+			_elm_lang$core$Native_List.range(1, n)));
+};
+var _exercism$xelm$DifferenceOfSquares$squareOfSum = function (n) {
+	return _exercism$xelm$DifferenceOfSquares$square(
+		_elm_lang$core$List$sum(
+			_elm_lang$core$Native_List.range(1, n)));
+};
+var _exercism$xelm$DifferenceOfSquares$difference = function (n) {
+	return _exercism$xelm$DifferenceOfSquares$squareOfSum(n) - _exercism$xelm$DifferenceOfSquares$sumOfSquares(n);
+};

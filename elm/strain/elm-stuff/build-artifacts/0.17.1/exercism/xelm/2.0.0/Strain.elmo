@@ -1,0 +1,36 @@
+var _exercism$xelm$Strain$keep = F2(
+	function (p, xs) {
+		keep:
+		while (true) {
+			var _p0 = xs;
+			if (_p0.ctor === '[]') {
+				return _elm_lang$core$Native_List.fromArray(
+					[]);
+			} else {
+				var _p2 = _p0._1;
+				var _p1 = _p0._0;
+				if (p(_p1)) {
+					return A2(
+						_elm_lang$core$List_ops['::'],
+						_p1,
+						A2(_exercism$xelm$Strain$keep, p, _p2));
+				} else {
+					var _v1 = p,
+						_v2 = _p2;
+					p = _v1;
+					xs = _v2;
+					continue keep;
+				}
+			}
+		}
+	});
+var _exercism$xelm$Strain$discard = F2(
+	function (p, xs) {
+		return A2(
+			_exercism$xelm$Strain$keep,
+			function (_p3) {
+				return _elm_lang$core$Basics$not(
+					p(_p3));
+			},
+			xs);
+	});

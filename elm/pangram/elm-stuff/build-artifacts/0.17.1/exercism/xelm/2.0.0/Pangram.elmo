@@ -1,0 +1,41 @@
+var _exercism$xelm$Pangram$alphabet = _elm_lang$core$Native_List.fromArray(
+	[
+		_elm_lang$core$Native_Utils.chr('A'),
+		_elm_lang$core$Native_Utils.chr('B'),
+		_elm_lang$core$Native_Utils.chr('C'),
+		_elm_lang$core$Native_Utils.chr('D'),
+		_elm_lang$core$Native_Utils.chr('E'),
+		_elm_lang$core$Native_Utils.chr('F'),
+		_elm_lang$core$Native_Utils.chr('G'),
+		_elm_lang$core$Native_Utils.chr('H'),
+		_elm_lang$core$Native_Utils.chr('I'),
+		_elm_lang$core$Native_Utils.chr('J'),
+		_elm_lang$core$Native_Utils.chr('K'),
+		_elm_lang$core$Native_Utils.chr('L'),
+		_elm_lang$core$Native_Utils.chr('M'),
+		_elm_lang$core$Native_Utils.chr('N'),
+		_elm_lang$core$Native_Utils.chr('O'),
+		_elm_lang$core$Native_Utils.chr('P'),
+		_elm_lang$core$Native_Utils.chr('Q'),
+		_elm_lang$core$Native_Utils.chr('R'),
+		_elm_lang$core$Native_Utils.chr('S'),
+		_elm_lang$core$Native_Utils.chr('T'),
+		_elm_lang$core$Native_Utils.chr('U'),
+		_elm_lang$core$Native_Utils.chr('V'),
+		_elm_lang$core$Native_Utils.chr('W'),
+		_elm_lang$core$Native_Utils.chr('X'),
+		_elm_lang$core$Native_Utils.chr('Y'),
+		_elm_lang$core$Native_Utils.chr('Z')
+	]);
+var _exercism$xelm$Pangram$isPangram = function (s) {
+	var formattedStringList = function (_p0) {
+		return _elm_lang$core$String$toList(
+			_elm_lang$core$String$toUpper(_p0));
+	}(s);
+	return A2(
+		_elm_lang$core$List$all,
+		function (x) {
+			return A2(_elm_lang$core$List$member, x, formattedStringList);
+		},
+		_exercism$xelm$Pangram$alphabet);
+};

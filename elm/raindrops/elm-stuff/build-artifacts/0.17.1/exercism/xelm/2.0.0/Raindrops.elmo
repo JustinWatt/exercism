@@ -1,0 +1,16 @@
+var _exercism$xelm$Raindrops$translateDrop = F3(
+	function (n, d, w) {
+		return _elm_lang$core$Native_Utils.eq(
+			A2(_elm_lang$core$Basics_ops['%'], n, d),
+			0) ? w : '';
+	});
+var _exercism$xelm$Raindrops$raindrops = function (n) {
+	var plong = A3(_exercism$xelm$Raindrops$translateDrop, n, 7, 'Plong');
+	var plang = A3(_exercism$xelm$Raindrops$translateDrop, n, 5, 'Plang');
+	var pling = A3(_exercism$xelm$Raindrops$translateDrop, n, 3, 'Pling');
+	var result = A2(
+		_elm_lang$core$Basics_ops['++'],
+		pling,
+		A2(_elm_lang$core$Basics_ops['++'], plang, plong));
+	return (!_elm_lang$core$Native_Utils.eq(result, '')) ? result : _elm_lang$core$Basics$toString(n);
+};

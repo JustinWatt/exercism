@@ -1,0 +1,13 @@
+var _exercism$xelm$Accumulate$accumulate = F2(
+	function (f, xs) {
+		var _p0 = xs;
+		if (_p0.ctor === '[]') {
+			return _elm_lang$core$Native_List.fromArray(
+				[]);
+		} else {
+			return A2(
+				_elm_lang$core$List_ops['::'],
+				f(_p0._0),
+				A2(_exercism$xelm$Accumulate$accumulate, f, _p0._1));
+		}
+	});

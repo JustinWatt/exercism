@@ -1,0 +1,37 @@
+var _exercism$xelm$Triangle$uniqueSides = function (_p0) {
+	return _elm_lang$core$Set$size(
+		_elm_lang$core$Set$fromList(_p0));
+};
+var _exercism$xelm$Triangle$invalidSides = function (sides) {
+	return A2(
+		_elm_lang$core$List$any,
+		F2(
+			function (x, y) {
+				return _elm_lang$core$Native_Utils.cmp(x, y) > -1;
+			})(0),
+		sides);
+};
+var _exercism$xelm$Triangle$triangleKind = F3(
+	function (s1, s2, s3) {
+		if (_exercism$xelm$Triangle$invalidSides(
+			_elm_lang$core$Native_List.fromArray(
+				[s1, s2, s3]))) {
+			return _elm_lang$core$Result$Err('Invalid lengths');
+		} else {
+			if ((_elm_lang$core$Native_Utils.cmp(s1 + s2, s3) < 1) || ((_elm_lang$core$Native_Utils.cmp(s1 + s3, s2) < 1) || (_elm_lang$core$Native_Utils.cmp(s2 + s3, s1) < 1))) {
+				return _elm_lang$core$Result$Err('Violates inequality');
+			} else {
+				var _p1 = _exercism$xelm$Triangle$uniqueSides(
+					_elm_lang$core$Native_List.fromArray(
+						[s1, s2, s3]));
+				switch (_p1) {
+					case 3:
+						return _elm_lang$core$Result$Ok('scalene');
+					case 2:
+						return _elm_lang$core$Result$Ok('isosceles');
+					default:
+						return _elm_lang$core$Result$Ok('equilateral');
+				}
+			}
+		}
+	});

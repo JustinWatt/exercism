@@ -1,0 +1,16 @@
+var _exercism$xelm$Anagram$anagram = F2(
+	function (word, newWord) {
+		return A2(_elm_lang$core$String$contains, newWord, word) && (!_elm_lang$core$Native_Utils.eq(newWord, word));
+	});
+var _exercism$xelm$Anagram$detect = F2(
+	function (w, words) {
+		return A3(
+			_elm_lang$core$List$foldl,
+			F2(
+				function (word, words) {
+					return A2(_exercism$xelm$Anagram$anagram, w, word) ? A2(_elm_lang$core$List_ops['::'], word, words) : words;
+				}),
+			_elm_lang$core$Native_List.fromArray(
+				[]),
+			words);
+	});

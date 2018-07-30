@@ -1,0 +1,20 @@
+var _exercism$xelm$Bob$last = function (xs) {
+	return _elm_lang$core$List$head(
+		_elm_lang$core$List$reverse(xs));
+};
+var _exercism$xelm$Bob$hey = function (sentence) {
+	var _p0 = _exercism$xelm$Bob$last(
+		_elm_lang$core$String$toList(sentence));
+	if (_p0.ctor === 'Just') {
+		switch (_p0._0.valueOf()) {
+			case '?':
+				return 'Sure.';
+			case '!':
+				return 'Whoa, chill out!';
+			default:
+				return 'Whatever.';
+		}
+	} else {
+		return 'Fine. Be that way!';
+	}
+};
